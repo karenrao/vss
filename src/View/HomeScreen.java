@@ -31,6 +31,7 @@ public class HomeScreen extends javax.swing.JPanel {
         CustomerButton = new javax.swing.JButton();
         ProductsButton = new javax.swing.JButton();
         OrderRequestButton = new javax.swing.JButton();
+        ReportsButton = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         VerticalLabel2 = new javax.swing.JLabel();
         WelcomeStaffLabel = new javax.swing.JLabel();
@@ -67,6 +68,16 @@ public class HomeScreen extends javax.swing.JPanel {
             }
         });
 
+        ReportsButton.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        ReportsButton.setText("Reports");
+        ReportsButton.setMaximumSize(new java.awt.Dimension(109, 29));
+        ReportsButton.setMinimumSize(new java.awt.Dimension(100, 100));
+        ReportsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ReportsButtonActionPerformed(evt);
+            }
+        });
+
         org.jdesktop.layout.GroupLayout jPanel6Layout = new org.jdesktop.layout.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -78,14 +89,18 @@ public class HomeScreen extends javax.swing.JPanel {
                 .add(ProductsButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 100, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(OrderRequestButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 155, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(350, Short.MAX_VALUE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(ReportsButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                .add(244, 244, 244))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
                 .add(jPanel6Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(OrderRequestButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                    .add(jPanel6Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                        .add(OrderRequestButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                        .add(ReportsButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .add(CustomerButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .add(ProductsButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -142,7 +157,7 @@ public class HomeScreen extends javax.swing.JPanel {
             .add(layout.createSequentialGroup()
                 .add(203, 203, 203)
                 .add(jPanel5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 308, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(0, 0, Short.MAX_VALUE))
+                .add(0, 224, Short.MAX_VALUE))
             .add(layout.createSequentialGroup()
                 .addContainerGap()
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -176,12 +191,17 @@ public class HomeScreen extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_OrderRequestButtonActionPerformed
 
+    private void ReportsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReportsButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ReportsButtonActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton CustomerButton;
     private javax.swing.JLabel HomeLabel;
     private javax.swing.JButton LogoutButton;
     private javax.swing.JButton OrderRequestButton;
     private javax.swing.JButton ProductsButton;
+    private javax.swing.JButton ReportsButton;
     private javax.swing.JLabel VerticalLabel2;
     private javax.swing.JLabel WelcomeStaffLabel;
     private javax.swing.JLabel jLabel1;
