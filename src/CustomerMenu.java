@@ -33,7 +33,11 @@ public class CustomerMenu extends javax.swing.JPanel {
         VerticalLabel2 = new javax.swing.JLabel();
         CustomerMenuLabel = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
-        jLabel1 = new javax.swing.JLabel();
+        OptionsBelowLabel = new javax.swing.JLabel();
+        LogoutButton = new javax.swing.JButton();
+        NavigationLabel = new javax.swing.JLabel();
+
+        setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 204));
 
@@ -84,8 +88,8 @@ public class CustomerMenu extends javax.swing.JPanel {
         CustomerMenuLabel.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         CustomerMenuLabel.setText("Customer Menu");
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jLabel1.setText("Please select an option below");
+        OptionsBelowLabel.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        OptionsBelowLabel.setText("Please select an option below");
 
         org.jdesktop.layout.GroupLayout jPanel5Layout = new org.jdesktop.layout.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -97,7 +101,7 @@ public class CustomerMenu extends javax.swing.JPanel {
                     .add(CustomerMenuLabel)
                     .add(VerticalLabel2)
                     .add(jSeparator3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 268, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel1))
+                    .add(OptionsBelowLabel))
                 .add(123, 123, 123))
         );
         jPanel5Layout.setVerticalGroup(
@@ -110,27 +114,40 @@ public class CustomerMenu extends javax.swing.JPanel {
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jSeparator3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(34, 34, 34)
-                .add(jLabel1)
+                .add(OptionsBelowLabel)
                 .addContainerGap(31, Short.MAX_VALUE))
         );
+
+        LogoutButton.setText("Logout");
+
+        NavigationLabel.setFont(new java.awt.Font("Lucida Grande", 0, 10)); // NOI18N
+        NavigationLabel.setText("Home > Customer");
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
-                .addContainerGap()
-                .add(jPanel6, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .add(layout.createSequentialGroup()
                 .add(203, 203, 203)
                 .add(jPanel5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 308, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(224, Short.MAX_VALUE))
+            .add(layout.createSequentialGroup()
+                .addContainerGap()
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jPanel6, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
+                        .add(NavigationLabel)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .add(LogoutButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 75, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(layout.createSequentialGroup()
-                .addContainerGap(71, Short.MAX_VALUE)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(NavigationLabel)
+                    .add(LogoutButton))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 42, Short.MAX_VALUE)
                 .add(jPanel5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(69, 69, 69)
                 .add(jPanel6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
@@ -146,9 +163,11 @@ public class CustomerMenu extends javax.swing.JPanel {
     private javax.swing.JButton CancelButton;
     private javax.swing.JButton CreateCustomerButton;
     private javax.swing.JLabel CustomerMenuLabel;
+    private javax.swing.JButton LogoutButton;
+    private javax.swing.JLabel NavigationLabel;
+    private javax.swing.JLabel OptionsBelowLabel;
     private javax.swing.JButton SearchCustomerButton;
     private javax.swing.JLabel VerticalLabel2;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JSeparator jSeparator3;
