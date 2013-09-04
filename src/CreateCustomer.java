@@ -29,6 +29,16 @@ public class CreateCustomer extends javax.swing.JPanel {
         jPanel5 = new javax.swing.JPanel();
         VerticalLabel2 = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
+        NameLabel = new javax.swing.JLabel();
+        PhoneLabel = new javax.swing.JLabel();
+        AddressLabel = new javax.swing.JLabel();
+        CompanyLabel = new javax.swing.JLabel();
+        EmailLabel = new javax.swing.JLabel();
+        CustomerNameField = new javax.swing.JTextField();
+        CustomerEmailField = new javax.swing.JTextField();
+        CustomerCompanyField = new javax.swing.JTextField();
+        CustomerAddressField = new javax.swing.JTextField();
+        CustomerPhoneField = new javax.swing.JTextField();
         jPanel6 = new javax.swing.JPanel();
         SearchCustomerButton = new javax.swing.JButton();
         CancelButton = new javax.swing.JButton();
@@ -44,12 +54,68 @@ public class CreateCustomer extends javax.swing.JPanel {
         VerticalLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         VerticalLabel2.setText("Create Customer");
 
+        NameLabel.setText("Name:");
+
+        PhoneLabel.setText("Phone:");
+
+        AddressLabel.setText("Address:");
+
+        CompanyLabel.setText("Company:");
+
+        EmailLabel.setText("Email:");
+
+        CustomerNameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CustomerNameFieldActionPerformed(evt);
+            }
+        });
+
+        CustomerEmailField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CustomerEmailFieldActionPerformed(evt);
+            }
+        });
+
+        CustomerCompanyField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CustomerCompanyFieldActionPerformed(evt);
+            }
+        });
+
+        CustomerAddressField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CustomerAddressFieldActionPerformed(evt);
+            }
+        });
+
+        CustomerPhoneField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CustomerPhoneFieldActionPerformed(evt);
+            }
+        });
+
         org.jdesktop.layout.GroupLayout jPanel5Layout = new org.jdesktop.layout.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jPanel5Layout.createSequentialGroup()
+                .add(88, 88, 88)
+                .add(jPanel5Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(AddressLabel)
+                    .add(CompanyLabel)
+                    .add(EmailLabel)
+                    .add(PhoneLabel)
+                    .add(NameLabel))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jPanel5Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(CustomerNameField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 219, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(CustomerPhoneField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 219, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(CustomerEmailField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 219, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(CustomerCompanyField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 219, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(CustomerAddressField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 219, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(101, Short.MAX_VALUE))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(99, Short.MAX_VALUE)
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .add(jPanel5Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.CENTER)
                     .add(jSeparator3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 268, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(VerticalLabel2))
@@ -62,7 +128,27 @@ public class CreateCustomer extends javax.swing.JPanel {
                 .add(VerticalLabel2)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jSeparator3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(306, Short.MAX_VALUE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(jPanel5Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(NameLabel)
+                    .add(CustomerNameField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(18, 18, 18)
+                .add(jPanel5Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(PhoneLabel)
+                    .add(CustomerPhoneField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(18, 18, 18)
+                .add(jPanel5Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(AddressLabel)
+                    .add(CustomerAddressField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(18, 18, 18)
+                .add(jPanel5Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(CompanyLabel)
+                    .add(CustomerCompanyField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(18, 18, 18)
+                .add(jPanel5Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(EmailLabel)
+                    .add(CustomerEmailField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 204));
@@ -108,13 +194,13 @@ public class CreateCustomer extends javax.swing.JPanel {
                         .add(jPanel6, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())
                     .add(layout.createSequentialGroup()
-                        .add(135, 135, 135)
-                        .add(jPanel5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(0, 0, Short.MAX_VALUE))
-                    .add(layout.createSequentialGroup()
                         .add(NavigationLabel)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .add(LogoutButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 75, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
+            .add(layout.createSequentialGroup()
+                .add(124, 124, 124)
+                .add(jPanel5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -123,18 +209,48 @@ public class CreateCustomer extends javax.swing.JPanel {
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(NavigationLabel)
                     .add(LogoutButton))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(52, 52, 52)
                 .add(jPanel5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(46, 46, 46)
                 .add(jPanel6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void CustomerNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustomerNameFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CustomerNameFieldActionPerformed
+
+    private void CustomerEmailFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustomerEmailFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CustomerEmailFieldActionPerformed
+
+    private void CustomerCompanyFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustomerCompanyFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CustomerCompanyFieldActionPerformed
+
+    private void CustomerAddressFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustomerAddressFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CustomerAddressFieldActionPerformed
+
+    private void CustomerPhoneFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustomerPhoneFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CustomerPhoneFieldActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel AddressLabel;
     private javax.swing.JButton CancelButton;
+    private javax.swing.JLabel CompanyLabel;
+    private javax.swing.JTextField CustomerAddressField;
+    private javax.swing.JTextField CustomerCompanyField;
+    private javax.swing.JTextField CustomerEmailField;
+    private javax.swing.JTextField CustomerNameField;
+    private javax.swing.JTextField CustomerPhoneField;
+    private javax.swing.JLabel EmailLabel;
     private javax.swing.JButton LogoutButton;
+    private javax.swing.JLabel NameLabel;
     private javax.swing.JLabel NavigationLabel;
+    private javax.swing.JLabel PhoneLabel;
     private javax.swing.JButton SearchCustomerButton;
     private javax.swing.JLabel VerticalLabel2;
     private javax.swing.JPanel jPanel5;
